@@ -3,8 +3,9 @@
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-
-    RewriteRule    ^$     index.php    [PT,L]
+    RewriteCond $1 !^(public|img|css|js)/
+    RewriteCond $1 !\.(gif|jpe?g|png|bmp|ico|css|js)$  
     RewriteRule    ^(.*)? index.php?url=$1     [QSA,PT,L]
-
+    
+    RewriteRule    ^$     index.php    [PT,L]
  </IfModule>

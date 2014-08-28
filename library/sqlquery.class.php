@@ -25,26 +25,33 @@ class SQLQuery {
 	    $this->_dbh=null;
     }
 
-}
-    /**
+
    
-    public function selectAll()
+    public function selectAll($table)
     {
-	    $query = 'select * from'.$this->table;
-	    return ($this->query($query));
 
+	    $sth = $this->_dbh->prepare('SELECT * FROM'.$table);
+	    $sth->execute();
+	    $result = $sth->fetchAll();
+	    return $result;
     }
 
-    public function select($id)
+    public function select($id,$table)
     {
-	    $query = 'select * from'.$this->table.'where id ='.mysql_real_escape_string($id);
-	    return ($this->query($query));
+	    $sth = $this->_dbh->prepare('select * from'.$table.'where id ='.$id);
+	    $sth->execute();
+	    $result = $sth->fetchAll();
+	    return $result;
     }
-
-
+}
     /** Custom sql query **/
     
- /**   public function query($query, $SingleResult=0)
+/**    public function query($query)
     {
-
-    **/	    
+	    $sth = $this->_dbh->prepare($query);
+    	    $sth->execute();
+	    $result = $sth->fetchAll();
+	    return $result;
+    }
+}
+**/
