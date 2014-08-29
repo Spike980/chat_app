@@ -1,0 +1,119 @@
+/* Style-sheet for login page */
+
+body {
+	background : #e77471 url(/img/background.jpg) no-repeat;
+}
+
+.loginform {
+	width : 400px;
+	height : 165px;
+	position : absolute;
+	left : 600px;
+	top : 200px;
+}
+
+
+.sitebranding {
+	position: absolute;
+	top : 260px;
+	left: 320px;
+}
+
+
+.fixedwidth {
+	position: block;
+	width : 240px;
+	float : left;
+	color : #484848;
+	font-weight : bold;
+}
+
+form.loginform fieldset {
+	background : 778899;
+	border : 2px solid grey;
+	margin : 20px;
+	padding-left : 50px;
+
+
+}
+
+.logo {
+	border-style : inset;
+	border-width : 5px;
+}
+
+#signup-bar {
+	background : black;
+	border : 5px ridge #282828;
+}
+
+.sitename {
+	font-family : 'Trebuchet MS';
+	color : white;
+	font-size : 30px;
+	position : absolute;
+	left : 170px;
+	top : 40px;
+}
+
+
+#signup {
+	height: 50px;
+	width: 100px;
+	position: absolute;
+	left : 1120px;
+	top : 55px;
+}
+
+#tagline {
+	position : absolute;
+	top : 495px;
+	left : 350px;
+	font-family : 'Arial Narrow';
+	font-size : 25px;
+}
+
+#globe {
+	width : 100px;
+	height : 100px;
+}
+
+#login {
+	position: relative;
+	left: 65px;
+	width : 90px;
+	height : 30px;
+	background : black;
+	color: white;
+}
+
+
+.signupform {
+	
+		position: absolute;
+		left: 620px;
+		top: 190px;
+	}
+
+#add {
+	position: relative;
+	left: 60px;
+	top: 60px;
+}
+
+#signupform {
+	position: relative;
+	left: 180px;
+	top: 5px;
+	width: 90px;
+	height: 30px;
+	background: black;
+	color: white;
+}
+
+.sex {
+	color: #484848;
+	font-weight: bold;
+	position: relative;
+	left: 230px;
+}
