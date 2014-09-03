@@ -6,4 +6,6 @@ else {
 }
 
 echo $msg;
+
+header("Location: /auths/login");
 ?>

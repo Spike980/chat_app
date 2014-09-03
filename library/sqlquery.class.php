@@ -10,7 +10,6 @@ class SQLQuery {
 	    try {
 		   $this->_dbh = new PDO ("mysql: host= $host;dbname=$dbname", $user, $pass);
 		    $this->_dbh->exec('SET NAMES utf8');	
-		    echo 'Connected to database'.PHP_EOL;
 	    }
 	    	
 	    catch (PDOException $e)

@@ -22,6 +22,7 @@ class AuthsController extends Controller {
 			if ($count==1)
 			{
 				$_SESSION['authenticated']=true;
+				$_SESSION['user'] = $clean["user"];
 			}
 			else
 
@@ -52,6 +53,7 @@ class AuthsController extends Controller {
 		if (isset($clean["user"]) && isset($clean["pass"]) && isset($clean["date"]) && isset($clean["month"]) && isset($clean["year"]) && isset($clean["sex"]))
 		{
 			$msg=$this->Auth->createAccount($clean);
+
 		}
 		else
 		{
@@ -59,6 +61,7 @@ class AuthsController extends Controller {
 			$check=1000;
 		}
 		$this->set('check',$check);
+		$this->set('msg',$msg);
 	}
 
 }

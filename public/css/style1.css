@@ -2,6 +2,8 @@
 
 body {
 	background : #e77471 url(/img/background.jpg) no-repeat;
+	margin: 0;
+	padding: 0;
 }
 
 .loginform {
@@ -29,7 +31,7 @@ body {
 }
 
 form.loginform fieldset {
-	background : 778899;
+/*	background : 778899;      */
 	border : 2px solid grey;
 	margin : 20px;
 	padding-left : 50px;
@@ -43,6 +45,7 @@ form.loginform fieldset {
 }
 
 #signup-bar {
+	min-width: 1280px;
 	background : black;
 	border : 5px ridge #282828;
 }
@@ -61,8 +64,8 @@ form.loginform fieldset {
 	height: 50px;
 	width: 100px;
 	position: absolute;
-	left : 1120px;
-	top : 55px;
+	left: 1180px;
+	top: 30px;
 }
 
 #tagline {
@@ -102,9 +105,9 @@ form.loginform fieldset {
 }
 
 #signupform {
-	position: relative;
-	left: 180px;
-	top: 5px;
+	margin-left: 37%;
+	/*left: 178px;
+	top: 5px;*/
 	width: 90px;
 	height: 30px;
 	background: black;
@@ -112,8 +115,8 @@ form.loginform fieldset {
 }
 
 .sex {
+	margin-left: 59%;
 	color: #484848;
 	font-weight: bold;
-	position: relative;
 	left: 230px;
 }

@@ -46,7 +46,6 @@ function callHook() {
 /** Autoload any classes that are required **/
 
 function __autoload($className) {
-	echo "$className";
 	if (file_exists(ROOT . DS . 'library' . DS . strtolower($className) . '.class.php')) {
 		require_once (ROOT . DS . 'library' . DS . strtolower($className) . '.class.php');
 	} else if (file_exists(ROOT . DS . 'application' . DS . 'controllers' . DS . strtolower($className) . '.php')) {

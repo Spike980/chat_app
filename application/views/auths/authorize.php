@@ -7,4 +7,5 @@ else {
 }
 
 echo $count;
+header("Location: /profiles/home");
 ?>
