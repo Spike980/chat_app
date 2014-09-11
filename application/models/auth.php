@@ -49,6 +49,23 @@ class Auth extends Model {
 	
 	}
 	 
+
+	public function updateStatusOnline($user) {
+
+		$stmt = $this->_dbh->prepare("UPDATE auths SET status = 'online' WHERE username = :userid");
+		$stmt->bindParam(':userid', $user, PDO::PARAM_STR, 32);
+		$stmt->execute();
+
+	}
+
+
+	public function updateStatusOffline($user) {
+
+		$stmt = $this->_dbh->prepare("UPDATE auths SET status = 'offline' WHERE username =:userid");
+		$stmt->bindParam(':userid', $user, PDO::PARAM_STR, 32);
+		$stmt->execute();
+
+		}
 	}
 
 

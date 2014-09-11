@@ -1,4 +1,5 @@
 <?php
+require(ROOT.DS.'library'.DS.'PasswordHash.php');
 
 class AuthsController extends Controller {
 
@@ -18,11 +19,11 @@ class AuthsController extends Controller {
 		if (isset($clean["user"]) && isset($clean["pass"]))
 		{
 			$count=$this->Auth->query($clean["user"],$clean["pass"]);
-			print($count);
 			if ($count==1)
 			{
 				$_SESSION['authenticated']=true;
 				$_SESSION['user'] = $clean["user"];
+				$this->Auth->updateStatusOnline($_SESSION['user']);
 			}
 			else
 
@@ -48,7 +49,7 @@ class AuthsController extends Controller {
 
 		global $clean;
 
-//		$fields = array("user", "pass", "email", "date", "month", "year", "sex");
+
 
 		if (isset($clean["user"]) && isset($clean["pass"]) && isset($clean["date"]) && isset($clean["month"]) && isset($clean["year"]) && isset($clean["sex"]))
 		{
@@ -62,6 +63,12 @@ class AuthsController extends Controller {
 		}
 		$this->set('check',$check);
 		$this->set('msg',$msg);
+	}
+
+	function logout()
+	{
+		$this->Auth->updateStatusOffline($_SESSION['user']);
+		session_destroy();
 	}
 
 }

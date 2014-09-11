@@ -12,8 +12,8 @@
 <h4> Fill in the form details. </h4>
 
 <div>
-<label for="email" class="fixedwidth"> E-mail </label>
-<input type="email" name="email" id="email">
+<label for="email" class="fixedwidth" > E-mail </label>
+<input type="email" name="email" id="email" autofocus>
 </div>
 
 <br>

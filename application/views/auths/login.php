@@ -19,7 +19,7 @@
   
   <div>
   <label for="username" class="fixedwidth"> Username  </label>
-  <input type="text" name="user" id="user">
+  <input type="text" name="user" id="user" autofocus>
   </div>
   
   <div>
