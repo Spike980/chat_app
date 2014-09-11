@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#topbar {
+
+	background: black; 
+	position:absolute;
+	width: 100%;
+	color: white;
+
+	
+}
+
+#topbar h4 {
+	padding-left: 0.8em;
+}
